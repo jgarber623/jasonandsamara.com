@@ -1,0 +1,6 @@
+source: ./src
+destination: ./public
+
+plugins:
+  - breakpoint
+  - jekyll-assets
