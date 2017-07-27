@@ -1,0 +1,27 @@
+.polaroid {
+  background-color: $color-slate;
+
+  &::after {
+    content: "";
+    display: block;
+    overflow: hidden;
+  }
+}
+
+.polaroid-content {
+  background-color: $color-white;
+  margin: $spacing;
+  padding: $spacing;
+  text-align: center;
+
+  h3 {
+    color: $color-navy;
+    font-size: 1rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,77 @@
+@-ms-viewport {
+	width: device-width;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+[aria-hidden] {
+  display: none !important;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+  background-color: $color-light-grey;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+body {
+  color: $color-grey;
+  font-family: "Crimson Text", serif;
+  font-weight: $font-normal;
+	margin: 0;
+}
+
+aside,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: $font-bold;
+}
+
+a {
+  -webkit-text-decoration-skip: objects;
+  background-color: transparent;
+  color: $color-gold;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+kbd {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: $font-bold;
+}
+
+small {
+  font-size: 80%;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  border-style: none;
+  display: block;
+  width: 100%;
+}

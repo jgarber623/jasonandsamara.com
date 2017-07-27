@@ -1,0 +1,69 @@
+.stationery {
+  padding: $spacing-2x;
+  position: relative;
+
+  @include breakpoint($medium) {
+    padding: $spacing-3x;
+  }
+
+  @include breakpoint($wide) {
+    box-shadow: 0 0 1px rgba(#000, 0.25);
+    margin: -0.75rem;
+    width: calc(50% + 1.5rem);
+  }
+
+  &::before,
+  &::after {
+    border: 1px solid $color-gold;
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  &::before {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    right: 1.25rem;
+    top: 1.25rem;
+
+    @include breakpoint($medium) {
+      bottom: 2rem;
+      left: 2rem;
+      right: 2rem;
+      top: 2rem;
+    }
+  }
+
+  &::after {
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 1.5rem;
+
+    @include breakpoint($medium) {
+      bottom: 2.25rem;
+      left: 2.25rem;
+      right: 2.25rem;
+      top: 2.25rem;
+    }
+  }
+
+  > :first-child {
+    margin-top: 1rem;
+  }
+
+  > :last-child {
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint($wide) {
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}

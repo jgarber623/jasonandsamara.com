@@ -1,0 +1,25 @@
+@include breakpoint($medium) {
+  .partners > * {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  @supports(display: flex) {
+    .partners {
+      display: flex;
+    }
+
+    .partners-inverse {
+      > :first-child {
+        order: 2;
+        width: 55%;
+      }
+
+      > :last-child {
+        order: 1;
+        width: 45%;
+      }
+    }
+  }
+}

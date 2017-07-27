@@ -1,0 +1,46 @@
+.prose {
+  background-color: $color-white;
+  margin: 0 auto;
+  max-width: 48rem;
+  padding: $spacing;
+
+  @include breakpoint($narrow) {
+    padding: $spacing-2x;
+  }
+
+  @include breakpoint($medium) {
+    padding: $spacing-3x;
+  }
+
+  h2 {
+    color: $color-gold;
+    font-size: 1rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-family: "Great Vibes", cursive;
+    font-size: 1.5rem;
+    font-weight: $font-normal;
+    margin: 1.125rem 0;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+.prose-alt {
+  h2 {
+    color: $color-navy;
+  }
+
+  a {
+    color: $color-navy;
+  }
+
+  .button {
+    border-color: $color-navy;
+  }
+}

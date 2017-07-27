@@ -1,0 +1,64 @@
+.hero {
+  position: relative;
+}
+
+.hero-content {
+  color: $color-white;
+  padding: $spacing;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  // text-shadow: 0 0 1px rgba($color-black, 0.25);
+  text-transform: uppercase;
+  top: 0;
+
+  @include breakpoint($narrow) {
+    bottom: 0;
+    padding: $spacing-2x;
+    text-align: left;
+    top: auto;
+
+    @supports(display: flex) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      top: 0;
+    }
+  }
+
+  h2 {
+    font-weight: $font-normal;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @include breakpoint((24rem ($narrow - 0.001rem), 40rem ($medium - 0.001rem))) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  @include breakpoint($medium) {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .location::before {
+    content: "|";
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+}

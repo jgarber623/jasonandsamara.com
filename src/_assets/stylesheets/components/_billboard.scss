@@ -1,0 +1,40 @@
+.billboard {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: $spacing;
+
+  @include breakpoint($narrow) {
+    padding: $spacing-2x;
+  }
+}
+
+.billboard-content {
+  background-color: $color-white;
+  background-color: rgba($color-white, 0.8);
+  margin: 0 auto;
+  max-width: 22rem;
+  padding: $spacing;
+  text-align: center;
+
+  @include breakpoint($narrow) {
+    padding: $spacing-2x;
+  }
+
+  @include breakpoint($medium) {
+    padding: $spacing;
+    width: 100%;
+  }
+
+  h4 {
+    font-family: "Great Vibes", cursive;
+    font-size: 1.5rem;
+    font-weight: $font-normal;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin: 0;
+  }
+}
