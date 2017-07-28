@@ -22,7 +22,7 @@ html {
 
 body {
   color: $color-grey;
-  font-family: "Crimson Text", serif;
+  font-family: $font-serif;
   font-weight: $font-normal;
 	margin: 0;
 }
@@ -55,8 +55,7 @@ a {
 
 abbr[title] {
   border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
+  text-decoration: none;
 }
 
 kbd {

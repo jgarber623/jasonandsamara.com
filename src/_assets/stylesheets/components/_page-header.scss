@@ -1,0 +1,19 @@
+.page-header {
+  background: $color-white;
+  box-shadow: 0 0 1px rgba(#000, 0.25);
+  position: relative;
+
+  h1 {
+    color: $color-gold;
+    font-family: $font-cursive;
+    font-size: 1.75rem;
+    font-weight: $font-normal;
+    margin: 0;
+    padding: 1rem $spacing;
+    text-align: center;
+
+    @include breakpoint($narrow) {
+      font-size: 2rem;
+    }
+  }
+}

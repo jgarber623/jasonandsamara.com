@@ -1,16 +1,24 @@
 .polaroid {
-  background-color: $color-slate;
+  @include breakpoint($medium) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
-  &::after {
-    content: "";
-    display: block;
-    overflow: hidden;
+    img {
+      flex-grow: 1;
+      object-fit: cover;
+    }
+  }
+
+  @include breakpoint(66rem) {
+    margin: -0.75rem;
+    width: calc(50% + 1.5rem);
   }
 }
 
 .polaroid-content {
   background-color: $color-white;
-  margin: $spacing;
+  border: $spacing solid $color-slate;
   padding: $spacing;
   text-align: center;
 

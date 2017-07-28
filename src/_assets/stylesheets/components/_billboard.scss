@@ -7,6 +7,13 @@
   @include breakpoint($narrow) {
     padding: $spacing-2x;
   }
+
+  @include breakpoint($medium) {
+    .partners > & {
+      align-items: flex-end;
+      display: flex;
+    }
+  }
 }
 
 .billboard-content {
@@ -27,7 +34,7 @@
   }
 
   h4 {
-    font-family: "Great Vibes", cursive;
+    font-family: $font-cursive;
     font-size: 1.5rem;
     font-weight: $font-normal;
     margin: 0;

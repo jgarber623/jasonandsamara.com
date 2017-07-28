@@ -1,0 +1,55 @@
+.page-navigation {
+  border-top: 1px solid $color-light-grey;
+  margin: 0 auto;
+  max-width: 64rem;
+  padding: 1rem 0;
+  pointer-events: none;
+  text-align: center;
+
+  @include breakpoint($wide) {
+    border: 0;
+    left: 0;
+    padding: 0 $spacing;
+    position: absolute;
+    right: 0;
+    top: 1.75rem;
+  }
+
+  .wrapper {
+    display: inline;
+    pointer-events: all;
+
+    @include breakpoint($narrow) {
+      display: inline-block;
+    }
+
+    @include breakpoint($wide) {
+      &:first-of-type {
+        float: left;
+      }
+
+      &:last-of-type {
+        float: right;
+      }
+    }
+  }
+
+  a {
+    color: $color-navy;
+    display: block;
+    font-size: 0.875rem;
+    padding: 0.25rem $spacing;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include breakpoint($medium) {
+      display: inline-block;
+      padding: 0.25rem 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
