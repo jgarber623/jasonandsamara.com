@@ -1,0 +1,37 @@
+.countdown {
+  position: relative;
+
+  picture::after {
+    background-image: radial-gradient(ellipse at center, rgba($color-black, 0) 0, rgba($color-black, 0.25) 100%);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.countdown-content {
+  color: $color-white;
+  left: 0;
+  padding: $spacing;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+
+  h2 {
+    font-weight: $font-normal;
+    line-height: 1;
+    margin: 0;
+    // text-shadow: 0 0 0.5rem rgba($color-black, 0.5);
+
+    &::first-letter {
+      font-family: $font-cursive;
+      // font-size: 1.75rem;
+      margin-right: 0.25rem;
+    }
+  }
+}

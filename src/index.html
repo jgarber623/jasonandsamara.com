@@ -101,6 +101,13 @@ layout: application
   </aside>
 </section>
 
-<section aria-labelledby="heading-countdown" id="countdown">
-  <h2 id="heading-countdown">We’re looking forward to celebrating with you!</h2>
+<section aria-labelledby="heading-countdown" class="countdown" id="countdown">
+  <picture>
+    <source srcset="{% asset_path 120-wide.jpg %}" media="(min-width: 32rem)">
+    <img src="{% asset_path 120-narrow.jpg %}" alt="">
+  </picture>
+
+  <div class="countdown-content">
+    <h2 id="heading-countdown">We’re looking forward to celebrating with you!</h2>
+  </div>
 </section>
