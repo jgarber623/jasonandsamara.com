@@ -3,34 +3,56 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: $spacing;
+  position: relative;
 
   @include breakpoint($narrow) {
     padding: $spacing-2x;
   }
 
   @include breakpoint($medium) {
-    .partners > & {
-      align-items: flex-end;
-      display: flex;
+    &::before {
+      content: "";
+      display: block;
+      padding: 0;
+      padding-top: (400 / 350) * 100%;
+      width: 100%;
     }
+  }
+}
+
+.billboard-hotel {
+  background-image: url("https://spaceholder.cc/400x250");
+
+  @include breakpoint($medium) {
+    background-image: url("https://spaceholder.cc/350x400");
+  }
+}
+
+.billboard-venue {
+  background-image: url("https://spaceholder.cc/400x250");
+
+  @include breakpoint($medium) {
+    background-image: url("https://spaceholder.cc/350x400");
   }
 }
 
 .billboard-content {
   background-color: $color-white;
   background-color: rgba($color-white, 0.8);
-  margin: 0 auto;
-  max-width: 22rem;
   padding: $spacing;
   text-align: center;
 
-  @include breakpoint($narrow) {
-    padding: $spacing-2x;
+  @include breakpoint($medium) {
+    bottom: $spacing-2x;
+    left: $spacing-2x;
+    position: absolute;
+    right: $spacing-2x;
   }
 
-  @include breakpoint($medium) {
-    padding: $spacing;
-    width: 100%;
+  @include breakpoint($ultra) {
+    bottom: $spacing-3x;
+    left: $spacing-3x;
+    right: $spacing-3x;
   }
 
   h4 {
@@ -38,10 +60,18 @@
     font-size: 1.5rem;
     font-weight: $font-normal;
     margin: 0;
+
+    @include breakpoint($ultra) {
+      font-size: 2rem;
+    }
   }
 
   p {
     font-size: 1.125rem;
     margin: 0;
+
+    @include breakpoint($ultra) {
+      font-size: 1.25rem;
+    }
   }
 }

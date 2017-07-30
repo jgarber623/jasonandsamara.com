@@ -56,6 +56,16 @@
     }
   }
 
+  @include breakpoint($wide) {
+    h2 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1.75rem;
+    }
+  }
+
   .location::before {
     content: "|";
     display: inline-block;

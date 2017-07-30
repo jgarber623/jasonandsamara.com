@@ -1,7 +1,5 @@
 .page-navigation {
   border-top: 1px solid $color-light-grey;
-  margin: 0 auto;
-  max-width: 64rem;
   padding: 1rem 0;
   pointer-events: none;
   text-align: center;
@@ -24,11 +22,9 @@
     }
 
     @include breakpoint($wide) {
-      &:first-of-type {
-        float: left;
-      }
+      float: left;
 
-      &:last-of-type {
+      + .wrapper {
         float: right;
       }
     }

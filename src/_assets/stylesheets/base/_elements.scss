@@ -15,7 +15,7 @@
 html {
   -ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-  background-color: $color-light-grey;
+  background-color: $color-white;
   box-sizing: border-box;
   line-height: 1.5;
 }
@@ -32,6 +32,7 @@ footer,
 header,
 main,
 nav,
+picture,
 section {
   display: block;
 }

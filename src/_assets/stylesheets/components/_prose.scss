@@ -1,14 +1,16 @@
 .prose {
   background-color: $color-white;
   margin: 0 auto;
-  max-width: 48rem;
   padding: $spacing;
 
   @include breakpoint($narrow) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: $spacing-2x;
   }
 
-  @include breakpoint($medium) {
+  @include breakpoint($wide) {
     padding: $spacing-3x;
   }
 
@@ -17,17 +19,22 @@
     font-size: 1rem;
     margin: 0;
     text-transform: uppercase;
-  }
 
-  h3 {
-    font-family: $font-cursive;
-    font-size: 1.5rem;
-    font-weight: $font-normal;
-    margin: 1.125rem 0;
+    @include breakpoint($ultra) {
+      font-size: 1.25rem;
+    }
   }
 
   p {
     font-size: 1.125rem;
+
+    @include breakpoint($wide) {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint($ultra) {
+      font-size: 1.5rem;
+    }
   }
 }
 

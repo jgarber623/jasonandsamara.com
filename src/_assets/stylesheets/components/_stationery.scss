@@ -3,13 +3,10 @@
   position: relative;
 
   @include breakpoint($medium) {
-    padding: $spacing-3x;
-  }
-
-  @include breakpoint(66rem) {
     box-shadow: 0 0 1px rgba(#000, 0.25);
-    margin: -0.75rem;
-    width: calc(50% + 1.5rem);
+    margin: -0.75em 0;
+    padding: $spacing-3x;
+    z-index: 1;
   }
 
   &::before,
@@ -49,21 +46,15 @@
     }
   }
 
-  > :first-child {
-    margin-top: 1rem;
-  }
+  h3 {
+    font-family: $font-cursive;
+    font-size: 1.5rem;
+    font-weight: $font-normal;
+    margin: 1.125rem 0;
 
-  > :last-child {
-    margin-bottom: 1rem;
-  }
-
-  @include breakpoint($wide) {
-    h3 {
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.25rem;
+    @include breakpoint($wide) {
+      font-size: 2.5rem;
+      margin: 1.25rem 0;
     }
   }
 }

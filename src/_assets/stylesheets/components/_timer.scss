@@ -1,0 +1,55 @@
+.timer {
+  background-color: $color-grey;
+  background-color: rgba($color-grey, 0.7);
+  display: table;
+  margin: $spacing auto 0 auto;
+  padding: $spacing;
+  width: 100%;
+
+  @include breakpoint($narrow) {
+    width: auto;
+  }
+
+  @include breakpoint($medium) {
+    margin: $spacing-2x 0 0 0;
+  }
+}
+
+.timer-wrapper {
+  display: table-cell;
+  line-height: 1;
+  text-align: center;
+
+  & + & {
+    padding-left: $spacing / 2;
+
+    @include breakpoint($narrow) {
+      padding-left: $spacing;
+    }
+
+    @include breakpoint($medium) {
+      padding-left: $spacing-2x;
+    }
+  }
+}
+
+.timer-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: $font-normal;
+
+  @include breakpoint($narrow) {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.timer-unit {
+  font-size: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include breakpoint($narrow) {
+    font-size: 0.875rem;
+  }
+}

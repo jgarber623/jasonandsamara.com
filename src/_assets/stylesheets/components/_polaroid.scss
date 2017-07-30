@@ -1,24 +1,20 @@
 .polaroid {
-  @include breakpoint($medium) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  background-color: $color-slate;
+  padding: $spacing;
+  position: relative;
 
-    img {
-      flex-grow: 1;
-      object-fit: cover;
-    }
+  @include breakpoint($medium) {
+    margin: -0.75rem 0;
+    z-index: 1;
   }
 
-  @include breakpoint(66rem) {
-    margin: -0.75rem;
-    width: calc(50% + 1.5rem);
+  picture {
+    margin: (-$spacing) (-$spacing) $spacing (-$spacing);
   }
 }
 
 .polaroid-content {
   background-color: $color-white;
-  border: $spacing solid $color-slate;
   padding: $spacing;
   text-align: center;
 
@@ -27,6 +23,20 @@
     font-size: 1rem;
     margin: 0;
     text-transform: uppercase;
+
+    @include breakpoint($ultra) {
+      font-size: 1.25rem;
+    }
+  }
+
+  p {
+    @include breakpoint($wide) {
+      font-size: 1.125rem;
+    }
+
+    @include breakpoint($ultra) {
+      font-size: 1.25rem;
+    }
   }
 
   > :last-child {
