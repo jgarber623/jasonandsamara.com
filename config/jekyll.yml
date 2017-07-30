@@ -1,6 +1,8 @@
 source: ./src
 destination: ./public
 
+host: 0.0.0.0
+
 plugins:
   - breakpoint
   - jekyll-assets
