@@ -13,43 +13,40 @@
   @include breakpoint($medium) {
     margin: $spacing-2x 0 0 0;
   }
-}
 
-.timer-wrapper {
-  display: table-cell;
-  line-height: 1;
-  text-align: center;
-
-  & + & {
-    padding-left: $spacing / 2;
+  span {
+    display: table-cell;
+    font-size: 0.625rem;
+    text-align: center;
+    text-transform: uppercase;
 
     @include breakpoint($narrow) {
+      font-size: 0.875rem;
+    }
+
+    + span {
       padding-left: $spacing;
-    }
 
-    @include breakpoint($medium) {
-      padding-left: $spacing-2x;
+      @include breakpoint($narrow) {
+        padding-left: $spacing;
+      }
+
+      @include breakpoint($medium) {
+        padding-left: $spacing-2x;
+      }
     }
   }
-}
 
-.timer-value {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: $font-normal;
+  b {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: $font-normal;
+    line-height: 1;
+    margin-bottom: 0.25rem;
 
-  @include breakpoint($narrow) {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-}
-
-.timer-unit {
-  font-size: 0.5rem;
-  text-align: center;
-  text-transform: uppercase;
-
-  @include breakpoint($narrow) {
-    font-size: 0.875rem;
+    @include breakpoint($narrow) {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
   }
 }
