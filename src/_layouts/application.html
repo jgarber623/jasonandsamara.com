@@ -15,17 +15,19 @@
   <header class="page-header" role="banner">
     <h1>Jason &amp; Samara</h1>
 
-    <nav class="page-navigation" role="navigation">
-      <span class="visually-hidden">Jump to:</span>
+    <nav class="page-navigation" id="navigation" role="navigation">
+      <button aria-expanded="false" aria-controls="navigation-list" id="navigation-control" hidden>
+        <span>
+          <span class="visually-hidden">Page Navigation</span>
+        </span>
+      </button>
 
-      <div class="wrapper">
-        <a href="#ceremony">Ceremony &amp; Reception</a>
-        <a href="#accommodations">Accommodations</a>
-      </div>
-      <div class="wrapper">
-        <a href="#travel">Travel &amp; Transportation</a>
-        <a href="#countdown">Countdown</a>
-      </div>
+      <ul id="navigation-list">
+        <li><a href="#ceremony">Ceremony &amp; Reception</a></li>
+        <li><a href="#accommodations">Accommodations</a></li>
+        <li><a href="#travel">Travel &amp; Transportation</a></li>
+        <li><a href="#countdown">Countdown</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -36,6 +38,17 @@
   <footer class="page-footer" role="contentinfo">
     <small><abbr title="Copyright">©</abbr> 2015–<abbr title="Forever">∞</abbr> <span title="Handsome">Jason Garber and <span title="Pretty Lady">Samara Strauss</span></small>
   </footer>
+
+  <script>
+    function loadJS(e,c) {
+      var d=document,r=d.createElement('script'),o=d.getElementsByTagName('script')[0];
+      r.src=e;r.async=true;o.parentNode.insertBefore(r,o);if(typeof c==='function')r.onload=c;return r;
+    }
+
+    if (window.matchMedia && document.querySelector) {
+			loadJS('{% asset_path application.js %}');
+		}
+  </script>
 
 </body>
 </html>

@@ -8,8 +8,8 @@
 	box-sizing: inherit;
 }
 
-[aria-hidden] {
-  display: none !important;
+[hidden] {
+  display: none;
 }
 
 html {
@@ -74,4 +74,23 @@ img {
   border-style: none;
   display: block;
   width: 100%;
+}
+
+button {
+	-webkit-appearance: button;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+	overflow: visible;
+	text-transform: none;
+
+	&::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+	}
+
+	&:-moz-focusring {
+		outline: 1px dotted ButtonText;
+	}
 }
