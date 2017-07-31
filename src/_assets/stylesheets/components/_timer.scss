@@ -7,11 +7,12 @@
   width: 100%;
 
   @include breakpoint($narrow) {
+    margin: $spacing 0 0 0;
     width: auto;
   }
 
   @include breakpoint($medium) {
-    margin: $spacing-2x 0 0 0;
+    margin-top: $spacing-2x;
   }
 
   span {

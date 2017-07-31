@@ -22,7 +22,7 @@
   text-align: center;
   top: 0;
 
-  @include breakpoint($medium) {
+  @include breakpoint($narrow) {
     bottom: 0;
     display: flex;
     flex-direction: column;
@@ -39,6 +39,7 @@
     font-weight: $font-normal;
     line-height: 1;
     margin: 0;
+    text-shadow: 0 0 1rem $color-black;
 
     @include breakpoint($narrow) {
       font-size: 2rem;

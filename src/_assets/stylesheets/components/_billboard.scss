@@ -1,5 +1,5 @@
 .billboard {
-  background-position: 50% 50%;
+  background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
   padding: $spacing;
@@ -21,18 +21,18 @@
 }
 
 .billboard-hotel {
-  background-image: url("https://spaceholder.cc/400x250");
+  background-image: url(asset_path("billboard-hotel.jpg"));
 
   @include breakpoint($medium) {
-    background-image: url("https://spaceholder.cc/350x400");
+    background-image: url(asset_path("billboard-hotel-medium.jpg"));
   }
 }
 
 .billboard-venue {
-  background-image: url("https://spaceholder.cc/400x250");
+  background-image: url(asset_path("billboard-venue.jpg"));
 
   @include breakpoint($medium) {
-    background-image: url("https://spaceholder.cc/350x400");
+    background-image: url(asset_path("billboard-venue-medium.jpg"));
   }
 }
 
