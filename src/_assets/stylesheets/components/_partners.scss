@@ -1,10 +1,9 @@
 @include breakpoint($medium) {
   .partners {
-    display: flex;
+    display: table;
 
     > * {
       display: table-cell;
-      display: flex;
       vertical-align: top;
       width: 55%;
 
@@ -12,15 +11,31 @@
         width: 45%;
       }
     }
+
+    @supports(display: flex) {
+      &,
+      > * {
+        display: flex;
+      }
+    }
   }
 
-  .partners-alt > *{
-    order: 2;
-    width: 55%;
+  .partners-alt {
+    direction: rtl;
 
-    + * {
-      order: 1;
-      width: 45%;
+    @supports(display: flex) {
+      direction: ltr;
+    }
+
+    > * {
+      direction: ltr;
+      order: 2;
+      width: 55%;
+
+      + * {
+        order: 1;
+        width: 45%;
+      }
     }
   }
 
