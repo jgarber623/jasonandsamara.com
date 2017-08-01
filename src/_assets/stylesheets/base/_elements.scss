@@ -52,6 +52,15 @@ a {
   -webkit-text-decoration-skip: objects;
   background-color: transparent;
   color: $color-gold;
+
+  &:focus,
+  &:hover {
+    color: $color-mongoose;
+  }
+
+  &:active {
+    color: $color-gold;
+  }
 }
 
 abbr[title] {
