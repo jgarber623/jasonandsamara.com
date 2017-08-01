@@ -19,6 +19,10 @@
   <link rel="source" href="https://github.com/jgarber623/jasonandsamara.com">
   <link rel="stylesheet" href="{% asset_path application.css %}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600|Great+Vibes">
+
+  <!--[if lt IE 9]>
+    <script src="{% asset_path vendor/html5shiv.js %}"></script>
+  <![endif]-->
 </head>
 <body>
 
@@ -53,6 +57,10 @@
     function loadJS(e,c) {
       var d=document,r=d.createElement('script'),o=d.getElementsByTagName('script')[0];
       r.src=e;r.async=true;o.parentNode.insertBefore(r,o);if(typeof c==='function')r.onload=c;return r;
+    }
+
+    if (typeof document.createElement('source').srcset === 'undefined') {
+      loadJS('{% asset_path vendor/picturefill.js %}');
     }
 
     if (window.matchMedia && document.querySelector) {
