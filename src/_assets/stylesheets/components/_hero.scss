@@ -27,6 +27,10 @@
     }
   }
 
+  @include breakpoint($ultra) {
+    padding: $spacing-3x;
+  }
+
   h2 {
     font-weight: $font-normal;
     margin: 0;

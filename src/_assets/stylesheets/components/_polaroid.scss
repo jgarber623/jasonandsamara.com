@@ -19,6 +19,10 @@
   padding: $spacing;
   text-align: center;
 
+  @include breakpoint($medium) {
+    flex-grow: 1;
+  }
+
   h3 {
     color: $color-navy;
     font-size: 1rem;
