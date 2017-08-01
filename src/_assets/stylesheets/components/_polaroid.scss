@@ -4,6 +4,7 @@
   position: relative;
 
   @include breakpoint($medium) {
+    flex-direction: column;
     margin: -0.75rem 0;
     z-index: 1;
   }

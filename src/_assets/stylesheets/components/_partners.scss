@@ -17,6 +17,10 @@
   @supports(display: flex) {
     .partners {
       display: flex;
+
+      > * {
+        display: flex;
+      }
     }
 
     .partners-alt {
