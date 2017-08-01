@@ -4,7 +4,9 @@ layout: application
 
 <section aria-labelledby="heading-hero" class="hero h-event">
   <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source srcset="{% asset_path hero-narrow.jpg %}" media="(min-width: 32rem)">
+    <!--[if IE 9]></video><![endif]-->
     <img src="{% asset_path hero.jpg %}" alt="">
   </picture>
 
@@ -97,7 +99,9 @@ layout: application
 
   <aside aria-labelledby="aside-transportation" class="polaroid" role="complementary">
     <picture>
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
       <source srcset="{% asset_path polaroid-narrow.jpg %}" media="(min-width: 32rem)">
+      <!--[if IE 9]></video><![endif]-->
       <img src="{% asset_path polaroid.jpg %}" alt="">
     </picture>
 
@@ -112,7 +116,9 @@ layout: application
 
 <section aria-labelledby="heading-countdown" class="countdown" id="countdown" tabindex="-1">
   <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source srcset="{% asset_path countdown-narrow.jpg %}" media="(min-width: 32rem)">
+    <!--[if IE 9]></video><![endif]-->
     <img src="{% asset_path countdown.jpg %}" alt="">
   </picture>
 
