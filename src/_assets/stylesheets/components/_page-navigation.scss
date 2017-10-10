@@ -17,9 +17,9 @@
       width: 1.5rem;
 
       &::after {
+        border-top: 0.25rem solid $color-slate;
         content: "";
         display: block;
-        border-top: 0.25rem solid $color-slate;
       }
     }
   }
