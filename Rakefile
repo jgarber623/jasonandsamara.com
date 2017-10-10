@@ -1,3 +1,3 @@
-Dir.glob('lib/tasks/*.rake').each { |r| import r }
+Dir.glob('lib/rake/tasks/*.rake').each { |r| import r }
 
-task default: ['jekyll:build']
+task default: ['build', 'test']
