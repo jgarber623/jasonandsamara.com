@@ -14,6 +14,6 @@ source 'https://rubygems.org' do
   end
 
   group :test do
-    gem 'html-proofer', '~> 3.7', '>= 3.7.6'
+    gem 'html-proofer', '~> 3.8'
   end
 end
