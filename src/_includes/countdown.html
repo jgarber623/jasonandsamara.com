@@ -1,0 +1,19 @@
+<section aria-labelledby="heading-countdown" class="countdown" id="countdown" tabindex="-1">
+  <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="{% asset_path countdown-narrow.jpg %}" media="(min-width: 32rem)">
+    <!--[if IE 9]></video><![endif]-->
+    <img src="{% asset_path countdown.jpg %}" alt="">
+  </picture>
+
+  <div class="countdown-content">
+    <h2 class="countdown-title" id="heading-countdown">We’re looking forward<br> to celebrating with you!</h2>
+
+    <time class="timer" datetime="2018-04-20T21:00:00Z" id="timer" hidden>
+      <span><b id="timer-days"></b> days</span>
+      <span><b id="timer-hours"></b> hours</span>
+      <span><b id="timer-minutes"></b> minutes</span>
+      <span><b id="timer-seconds"></b> seconds</span>
+    </time>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section aria-labelledby="heading-hero" class="hero h-event">
+  <picture>
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="{% asset_path hero-narrow.jpg %}" media="(min-width: 32rem)">
+    <!--[if IE 9]></video><![endif]-->
+    <img src="{% asset_path hero.jpg %}" alt="">
+  </picture>
+
+  <div class="hero-content">
+    <h2 class="hero-title" id="heading-hero">Save the Date</h2>
+
+    <p>
+      <span class="visually-hidden">
+        <span class="p-name">Jason and Samara get married</span> on
+      </span>
+      <time class="dt-start" datetime="2018-04-20T17:00">April 20, 2018</time>
+      <span class="visually-hidden">in</span>
+      <span class="location p-location h-adr">
+        <span class="p-locality">Gwynedd</span>, <abbr class="p-region" title="Pennsylvania">PA</abbr><span class="visually-hidden">.</span>
+      </span>
+    </p>
+  </div>
+</section>
