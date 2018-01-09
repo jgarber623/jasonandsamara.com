@@ -1,0 +1,45 @@
+@supports(display: flex) {
+  .registries > * {
+    flex-direction: column;
+  }
+}
+
+.registries-content {
+  text-align: center;
+
+  @supports(display: flex) {
+    > :first-child {
+      flex-grow: 1;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.registries-aside {
+  background-color: $color-slate;
+  padding: $spacing;
+
+  @include breakpoint($narrow) {
+    padding: $spacing-2x;
+  }
+
+  > a {
+    background-color: $color-white;
+    display: block;
+    margin: 0 auto $spacing auto;
+    padding: $spacing;
+    width: 50%;
+
+    @include breakpoint($narrow) {
+      padding: $spacing-2x;
+      width: 66%;
+    }
+
+    @include breakpoint($wide) {
+      padding: $spacing-3x;
+    }
+  }
+}

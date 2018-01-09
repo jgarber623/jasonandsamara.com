@@ -36,7 +36,7 @@
 
     @include breakpoint($wide) {
       column-count: 1;
-      padding: 1rem $spacing;
+      padding: 1rem ($spacing * 1.25); // account for 0.75 multiplier below
 
       @supports(display: flex) {
         border: 0;
@@ -75,6 +75,10 @@
     padding: 0.25rem $spacing;
     text-decoration: none;
     text-transform: uppercase;
+
+    @include breakpoint($wide) {
+      padding: 0.25rem ($spacing * 0.75);
+    }
 
     &:hover,
     &:focus {

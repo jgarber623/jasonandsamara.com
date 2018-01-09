@@ -1,0 +1,22 @@
+.retailers {
+  display: table;
+  width: 100%;
+
+  a {
+    display: table-cell;
+    padding: $spacing;
+    width: 50%;
+
+    @include breakpoint($narrow ($medium - 0.001rem)) {
+      padding: $spacing-2x;
+    }
+
+    &:first-child {
+      background-color: $color-black;
+    }
+
+    &:last-child {
+      background-color: #133a87;
+    }
+  }
+}

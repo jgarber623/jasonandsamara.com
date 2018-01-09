@@ -31,41 +31,18 @@
     padding: $spacing-3x;
   }
 
-  h2 {
-    font-weight: $font-normal;
-    margin: 0;
-  }
-
   p {
     margin: 0;
-  }
 
-  @include breakpoint((24rem ($narrow - 0.001rem), 40rem ($medium - 0.001rem))) {
-    h2 {
-      font-size: 2rem;
-    }
-
-    p {
+    @include breakpoint((24rem ($narrow - 0.001rem), 40rem ($medium - 0.001rem))) {
       font-size: 1.25rem;
     }
-  }
 
-  @include breakpoint($medium) {
-    h2 {
-      font-size: 3rem;
-    }
-
-    p {
+    @include breakpoint($medium) {
       font-size: 1.5rem;
     }
-  }
 
-  @include breakpoint($wide) {
-    h2 {
-      font-size: 4rem;
-    }
-
-    p {
+    @include breakpoint($wide) {
       font-size: 1.75rem;
     }
   }
@@ -74,5 +51,22 @@
     content: "|";
     display: inline-block;
     margin: 0 0.5rem;
+  }
+}
+
+.hero-title {
+  font-weight: $font-normal;
+  margin: 0;
+
+  @include breakpoint((24rem ($narrow - 0.001rem), 40rem ($medium - 0.001rem))) {
+    font-size: 2rem;
+  }
+
+  @include breakpoint($medium) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint($wide) {
+    font-size: 4rem;
   }
 }

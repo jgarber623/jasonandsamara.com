@@ -23,17 +23,6 @@
     flex-grow: 1;
   }
 
-  h3 {
-    color: $color-navy;
-    font-size: 1rem;
-    margin: 0;
-    text-transform: uppercase;
-
-    @include breakpoint($ultra) {
-      font-size: 1.25rem;
-    }
-  }
-
   p {
     @include breakpoint($wide) {
       font-size: 1.125rem;
@@ -46,5 +35,16 @@
 
   > :last-child {
     margin-bottom: 0;
+  }
+}
+
+.polaroid-title {
+  color: $color-navy;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+
+  @include breakpoint($ultra) {
+    font-size: 1.25rem;
   }
 }

@@ -34,34 +34,34 @@
   @include breakpoint($wide) {
     padding: $spacing-3x;
   }
+}
 
-  h2 {
-    font-weight: $font-normal;
-    line-height: 1;
-    margin: 0;
-    text-shadow: 0 0 1rem $color-black;
+.countdown-title {
+  font-weight: $font-normal;
+  line-height: 1;
+  margin: 0;
+  text-shadow: 0 0 1rem $color-black;
+
+  @include breakpoint($narrow) {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  @include breakpoint($medium) {
+    font-size: 3rem;
+  }
+
+  &::first-letter {
+    font-family: $font-cursive;
+    font-size: 1.75rem;
+    margin-right: 0.25rem;
 
     @include breakpoint($narrow) {
-      font-size: 2rem;
-      line-height: 1.1;
+      font-size: 2.5rem;
     }
 
     @include breakpoint($medium) {
-      font-size: 3rem;
-    }
-
-    &::first-letter {
-      font-family: $font-cursive;
-      font-size: 1.75rem;
-      margin-right: 0.25rem;
-
-      @include breakpoint($narrow) {
-        font-size: 2.5rem;
-      }
-
-      @include breakpoint($medium) {
-        font-size: 3.5rem;
-      }
+      font-size: 3.5rem;
     }
   }
 }

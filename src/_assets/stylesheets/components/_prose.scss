@@ -16,31 +16,31 @@
   @include breakpoint($wide) {
     padding: $spacing-3x;
   }
+}
 
-  h2 {
-    color: $color-gold;
-    font-size: 1rem;
-    margin: 0;
-    text-transform: uppercase;
+.prose-title {
+  color: $color-gold;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
 
-    @include breakpoint($ultra) {
-      font-size: 1.25rem;
-    }
+  .prose-alt & {
+    color: $color-navy;
   }
 
-  p {
-    font-size: 1.125rem;
-
-    @include breakpoint($wide) {
-      font-size: 1.25rem;
-    }
-
-    @include breakpoint($ultra) {
-      font-size: 1.5rem;
-    }
+  @include breakpoint($ultra) {
+    font-size: 1.25rem;
   }
 }
 
-.prose-alt h2 {
-  color: $color-navy;
+.prose-content p {
+  font-size: 1.125rem;
+
+  @include breakpoint($wide) {
+    font-size: 1.25rem;
+  }
+
+  @include breakpoint($ultra) {
+    font-size: 1.5rem;
+  }
 }

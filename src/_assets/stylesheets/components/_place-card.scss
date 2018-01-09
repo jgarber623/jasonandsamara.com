@@ -1,0 +1,26 @@
+.place-card {
+  background-color: $color-white;
+  background-color: rgba($color-white, 0.8);
+  padding: $spacing;
+  text-align: center;
+}
+
+.place-card-title {
+  font-family: $font-cursive;
+  font-size: 1.5rem;
+  font-weight: $font-normal;
+  margin: 0;
+
+  @include breakpoint($ultra) {
+    font-size: 2rem;
+  }
+}
+
+.place-card-content {
+  font-size: 1.125rem;
+  margin: 0;
+
+  @include breakpoint($ultra) {
+    font-size: 1.25rem;
+  }
+}

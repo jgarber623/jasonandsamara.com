@@ -45,16 +45,16 @@
       top: 2.25rem;
     }
   }
+}
 
-  h3 {
-    font-family: $font-cursive;
-    font-size: 1.5rem;
-    font-weight: $font-normal;
-    margin: 1.125rem 0;
+.stationery-title {
+  font-family: $font-cursive;
+  font-size: 1.5rem;
+  font-weight: $font-normal;
+  margin: 1.125rem 0;
 
-    @include breakpoint($wide) {
-      font-size: 2.5rem;
-      margin: 1.25rem 0;
-    }
+  @include breakpoint($wide) {
+    font-size: 2.5rem;
+    margin: 1.25rem 0;
   }
 }

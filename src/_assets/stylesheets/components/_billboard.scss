@@ -37,11 +37,6 @@
 }
 
 .billboard-content {
-  background-color: $color-white;
-  background-color: rgba($color-white, 0.8);
-  padding: $spacing;
-  text-align: center;
-
   @include breakpoint($medium) {
     bottom: $spacing-2x;
     left: $spacing-2x;
@@ -53,25 +48,5 @@
     bottom: $spacing-3x;
     left: $spacing-3x;
     right: $spacing-3x;
-  }
-
-  h4 {
-    font-family: $font-cursive;
-    font-size: 1.5rem;
-    font-weight: $font-normal;
-    margin: 0;
-
-    @include breakpoint($ultra) {
-      font-size: 2rem;
-    }
-  }
-
-  p {
-    font-size: 1.125rem;
-    margin: 0;
-
-    @include breakpoint($ultra) {
-      font-size: 1.25rem;
-    }
   }
 }
