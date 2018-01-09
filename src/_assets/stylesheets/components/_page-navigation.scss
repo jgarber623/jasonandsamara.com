@@ -1,53 +1,71 @@
-.page-navigation {
-  button {
-    background-color: transparent;
-    border: 0;
-    left: 1rem;
-    line-height: 0;
-    padding: 0.5rem;
-    position: absolute;
-    top: 1.25rem;
+.page-navigation-control {
+  background-color: transparent;
+  border: 0;
+  left: 1rem;
+  line-height: 0;
+  padding: 0.5rem;
+  position: absolute;
+  top: 1.25rem;
 
-    > span {
-      border-color: $color-slate;
-      border-style: solid;
-      border-width: 0.25rem 0;
-      display: inline-block;
-      padding: 0.25rem 0;
-      width: 1.5rem;
+  > span {
+    border-color: $color-slate;
+    border-style: solid;
+    border-width: 0.25rem 0;
+    display: inline-block;
+    height: 1.25rem;
+    padding: 0.25rem 0;
+    position: relative;
+    transition: border-color 150ms ease-in-out;
+    width: 1.5rem;
 
-      &::after {
-        border-top: 0.25rem solid $color-slate;
-        content: "";
-        display: block;
-      }
+    &::before,
+    &::after {
+      border-top: 0.25rem solid $color-slate;
+      content: "";
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transition: transform 300ms ease-in-out;
     }
   }
 
-  ul {
-    border-top: 1px solid $color-light-grey;
-    list-style: none;
-    margin: 0;
-    padding: 1rem 0;
+  &[aria-expanded="true"] > span {
+    border-color: transparent;
 
-    @include breakpoint($narrow) {
-      column-count: 2;
+    &::before {
+      transform: rotate(45deg);
     }
 
-    @include breakpoint($wide) {
-      column-count: 1;
-      padding: 1rem ($spacing * 1.25); // account for 0.75 multiplier below
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
 
-      @supports(display: flex) {
-        border: 0;
-        display: flex;
-        justify-content: center;
-        left: 0;
-        position: absolute;
-        right: 0;
-        text-align: left;
-        top: 0.65rem;
-      }
+.page-navigation-list {
+  border-top: 1px solid $color-light-grey;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+
+  @include breakpoint($narrow) {
+    column-count: 2;
+  }
+
+  @include breakpoint($wide) {
+    column-count: 1;
+    padding: 1rem ($spacing * 1.25); // account for 0.75 multiplier below
+
+    @supports(display: flex) {
+      border: 0;
+      display: flex;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: left;
+      top: 0.65rem;
     }
   }
 
