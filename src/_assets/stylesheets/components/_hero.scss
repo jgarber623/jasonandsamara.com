@@ -2,22 +2,14 @@
   position: relative;
 }
 
-.hero-content {
-  color: $color-white;
-  left: 0;
-  padding: $spacing;
-  position: absolute;
-  right: 0;
+.hero-wrapper {
   text-align: center;
-  text-shadow: 0 0 1rem $color-black;
-  text-transform: uppercase;
-  top: 0;
 
   @include breakpoint($narrow) {
     bottom: 0;
     padding: $spacing-2x;
+    position: absolute;
     text-align: left;
-    top: auto;
 
     @supports(display: flex) {
       display: flex;
@@ -29,6 +21,22 @@
 
   @include breakpoint($ultra) {
     padding: $spacing-3x;
+  }
+}
+
+.hero-content {
+  color: $color-white;
+  left: 0;
+  padding: $spacing;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 0 1rem $color-black;
+  text-transform: uppercase;
+  top: 0;
+
+  @include breakpoint($narrow) {
+    padding: 0;
+    position: relative;
   }
 
   p {
@@ -68,5 +76,27 @@
 
   @include breakpoint($wide) {
     font-size: 4rem;
+  }
+}
+
+.hero-cta {
+  background-color: $color-grey;
+  background-color: rgba($color-grey, 0.7);
+  bottom: 0;
+  left: 0;
+  padding: $spacing;
+  position: absolute;
+  right: 0;
+
+  @include breakpoint($narrow) {
+    background-color: transparent;
+    margin-top: $spacing;
+    padding: 0;
+    position: relative;
+  }
+
+  .button {
+    margin: 0;
+    padding: 0.75rem $spacing;
   }
 }

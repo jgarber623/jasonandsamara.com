@@ -45,6 +45,22 @@
       top: 2.25rem;
     }
   }
+
+  .button-inverse {
+    margin-right: 0.5rem;
+
+    @include breakpoint($narrow) {
+      padding-left: $spacing-2x;
+      padding-right: $spacing-2x;
+    }
+  }
+
+  @include breakpoint($medium 58rem) {
+    .button {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
 }
 
 .stationery-title {
