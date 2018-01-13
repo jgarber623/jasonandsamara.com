@@ -10,18 +10,18 @@
 
   <meta name="twitter:card" content="summary">
 	<meta property="og:description" content="Everything you’ll need to know about Jason’s and Samara’s wedding ceremony.">
-	<meta property="og:image" content="https://jasonandsamara.com{% asset_path jasonandsamara-256x256.jpg %}">
+	<meta property="og:image" content="https://jasonandsamara.com{% asset jasonandsamara-256x256.jpg @path %}">
 	<meta property="og:title" content="Jason &amp; Samara are getting married!">
 
-  <link rel="apple-touch-icon" href="{% asset_path jasonandsamara-256x256.png %}">
+  <link rel="apple-touch-icon" href="{% asset jasonandsamara-256x256.png @path %}">
   <link rel="license" href="https://github.com/jgarber623/jasonandsamara.com/blob/master/LICENSE">
-	<link rel="shortcut icon" href="{% asset_path jasonandsamara-256x256.png %}">
+	<link rel="shortcut icon" href="{% asset jasonandsamara-256x256.png @path %}">
   <link rel="source" href="https://github.com/jgarber623/jasonandsamara.com">
-  <link rel="stylesheet" href="{% asset_path application.css %}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600|Great+Vibes">
+  {% asset application.css !type %}
+  {% asset "https://fonts.googleapis.com/css?family=Crimson+Text:400,600|Great+Vibes.css" !type %}
 
   <!--[if lt IE 9]>
-    <script src="{% asset_path vendor/html5shiv.js %}"></script>
+    {% asset vendor/html5shiv.js !type %}
   <![endif]-->
 </head>
 <body>
@@ -61,11 +61,11 @@
     }
 
     if (typeof document.createElement('source').srcset === 'undefined') {
-      loadJS('{% asset_path vendor/picturefill.js %}');
+      loadJS('{% asset vendor/picturefill.js @path %}');
     }
 
     if (window.matchMedia && document.querySelector) {
-			loadJS('{% asset_path application.js %}');
+			loadJS('{% asset application.js @path %}');
 		}
   </script>
 
