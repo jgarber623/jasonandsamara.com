@@ -10,9 +10,9 @@ before_install:
   - nvm install node
   - npm install -g eslint sass-lint
 script:
-  - bundle exec rake test:html
-  - bundle exec rake test:javascript
-  - bundle exec rake test:sass
+  - bin/rake test:html
+  - bin/rake test:javascript
+  - bin/rake test:sass
 notifications:
   email: false
   slack:

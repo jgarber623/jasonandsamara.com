@@ -20,13 +20,13 @@ namespace :test do
   desc 'Lint JavaScript with ESLint'
   task :javascript do
     puts '=> Linting JavaScript with ESLint...'
-    system('eslint src/_assets/javascripts') or raise
+    system 'eslint src/_assets/javascripts' or raise
   end
 
   desc 'Lint stylesheets with Sass Lint'
   task :sass do
     puts '=> Linting stylesheets with Sass Lint...'
-    system('sass-lint --no-exit --verbose') or raise
+    system 'sass-lint --no-exit --verbose' or raise
   end
 end
 
