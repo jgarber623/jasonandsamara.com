@@ -2,8 +2,10 @@ require 'html-proofer'
 
 desc 'Test the site with html-proofer and sass-lint'
 task :test do
+  puts '=> Building site to ./public...'
   Rake::Task['build'].invoke unless File.directory?('./public')
 
+  puts '=> Checking site with HTMLProofer...'
   HTMLProofer.check_directory('./public', {
     assume_extension: true,
     empty_alt_ignore: true,
@@ -11,5 +13,9 @@ task :test do
     url_ignore: [/crateandbarrel.com/]
   }).run
 
-  sh 'sass-lint -v -q'
+  puts '=> Linting JavaScript with ESLint...'
+  system 'eslint src/_assets/javascripts'
+
+  puts '=> Linting stylesheets with Sass Lint...'
+  system 'sass-lint --no-exit --verbose'
 end
