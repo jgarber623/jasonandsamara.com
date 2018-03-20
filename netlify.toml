@@ -1,0 +1,42 @@
+[build]
+publish = "public"
+command = "bin/rake build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Content-Security-Policy = '''
+      default-src 'self';
+      script-src 'self' 'unsafe-inline';
+      style-src 'self' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      frame-ancestors 'none';
+      '''
+    Link = '''
+      <https://fonts.googleapis.com/>; rel="preconnect",
+      <https://fonts.gstatic.com/>; rel="preconnect"
+      '''
+    X-Frame-Options = "SAMEORIGIN"
+    X-UA-Compatible = "IE=Edge"
+    X-XSS-Protection = "1; mode=block"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
