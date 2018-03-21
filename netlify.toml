@@ -2,6 +2,9 @@
 publish = "public"
 command = "bin/rake build"
 
+[context.production.environment]
+JEKYLL_ENV = "production"
+
 [[headers]]
   for = "/*"
   [headers.values]
