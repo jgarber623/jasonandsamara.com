@@ -1,6 +1,8 @@
 env:
   browser: true
 extends: 'eslint:recommended'
+plugins:
+  - frontmatter
 globals:
   Navigation: true
   Timer: true

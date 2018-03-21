@@ -1,0 +1,19 @@
+---
+---
+
+{
+  "short_name": "Jason & Samara",
+  "name": "Jason & Samara",
+  "icons": [
+    {
+			"src": "{% asset jasonandsamara-256x256.png @path %}",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "minimal-ui",
+  "orientation": "portrait"
+}
