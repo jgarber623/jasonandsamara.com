@@ -26,8 +26,12 @@ JEKYLL_ENV = "production"
       <https://fonts.gstatic.com/>; rel="preconnect"
       '''
     X-Frame-Options = "SAMEORIGIN"
-    X-UA-Compatible = "IE=Edge"
     X-XSS-Protection = "1; mode=block"
+
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
 
 [[headers]]
   for = "/assets/*"
