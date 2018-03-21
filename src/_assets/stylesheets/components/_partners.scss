@@ -1,21 +1,16 @@
 @include breakpoint($medium) {
   .partners {
     display: table;
+    display: flex;
 
     > * {
       display: table-cell;
+      display: flex;
       vertical-align: top;
       width: 55%;
 
       + * {
         width: 45%;
-      }
-    }
-
-    @supports(display: flex) {
-      &,
-      > * {
-        display: flex;
       }
     }
   }

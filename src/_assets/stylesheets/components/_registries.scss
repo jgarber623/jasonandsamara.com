@@ -1,16 +1,12 @@
-@supports(display: flex) {
-  .registries > * {
-    flex-direction: column;
-  }
+.registries > * {
+  flex-direction: column;
 }
 
 .registries-content {
   text-align: center;
 
-  @supports(display: flex) {
-    > :first-child {
-      flex-grow: 1;
-    }
+  > :first-child {
+    flex-grow: 1;
   }
 
   p {

@@ -4,13 +4,10 @@
   padding: $spacing;
 
   @include breakpoint($narrow) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: $spacing-2x;
-
-    @supports(display: flex) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
   }
 
   @include breakpoint($wide) {
