@@ -5,18 +5,10 @@
 
 const version = 'v{{ "now" | date: "%Y%m%d%H%M%S" }}';
 
-const clearOldCaches = () => {
-  return caches.keys().then(keys => {
-    return Promise.all(keys.map(key => {
-      if (key.indexOf(version) === -1) {
-        return caches.delete(key);
-      }
-    }));
-  });
-};
+addEventListener('install', event => {
+  self.skipWaiting();
 
-const updateCache = () => {
-  return caches.open(version).then(cache => {
+  event.waitUntil(caches.open(version).then(cache => {
     // These items won't block Service Worker installation
     cache.addAll([
       '{% asset countdown.jpg @path %}',
@@ -34,15 +26,20 @@ const updateCache = () => {
       '{% asset application.css @path %}',
       '{% asset application.js @path %}'
     ]);
-  });
-};
-
-addEventListener('install', event => {
-  event.waitUntil(updateCache().then(() => self.skipWaiting()));
+  }));
 });
 
 addEventListener('activate', event => {
-  event.waitUntil(clearOldCaches().then(() => self.clients.claim()));
+  self.clients.claim();
+
+  // Clear old caches
+  event.waitUntil(caches.keys().then(keys => {
+    return Promise.all(keys.map(key => {
+      if (key.indexOf(version) === -1) {
+        return caches.delete(key);
+      }
+    }));
+  }));
 });
 
 addEventListener('fetch', event => {
