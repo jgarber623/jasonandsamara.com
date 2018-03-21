@@ -1,12 +1,10 @@
 .timer {
-  background-color: $color-grey;
-  background-color: rgba($color-grey, 0.7);
   display: table;
   margin: $spacing auto 0 auto;
-  padding: $spacing;
   width: 100%;
 
   @include breakpoint($narrow) {
+    display: flex;
     margin: $spacing 0 0 0;
     width: auto;
   }
@@ -16,25 +14,16 @@
   }
 
   span {
+    background-color: $color-grey;
+    background-color: rgba($color-grey, 0.7);
     display: table-cell;
     font-size: 0.625rem;
+    padding: $spacing;
     text-align: center;
     text-transform: uppercase;
 
     @include breakpoint($narrow) {
       font-size: 0.875rem;
-    }
-
-    + span {
-      padding-left: $spacing;
-
-      @include breakpoint($narrow) {
-        padding-left: $spacing;
-      }
-
-      @include breakpoint($medium) {
-        padding-left: $spacing-2x;
-      }
     }
   }
 
