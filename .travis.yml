@@ -8,7 +8,6 @@ cache:
 rvm:
   - 2.4.3
 before_install:
-  - nvm install node
   - npm install -g eslint eslint-plugin-frontmatter sass-lint
 script:
   - bin/rake test:html
