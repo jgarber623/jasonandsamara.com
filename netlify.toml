@@ -12,7 +12,7 @@ JEKYLL_ENV = "production"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
 
 [[headers]]
-  for = "/"
+  for = "/index.html"
   [headers.values]
     Content-Security-Policy = '''
       default-src 'self';
