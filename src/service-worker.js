@@ -1,52 +1,65 @@
----
----
-
 'use strict';
 
-const version = 'v{{ "now" | date: "%Y%m%d%H%M%S" }}';
+const cacheVersion = 'v1';
+
+const ignoredUrls = [
+  'fonts.googleapis.com',
+  'fonts.gstatic.com'
+];
 
 addEventListener('install', event => {
   self.skipWaiting();
 
-  event.waitUntil(caches.open(version).then(cache => {
-    // These items won't block Service Worker installation
-    cache.addAll([
-      '{% asset countdown.jpg @path %}',
-      '{% asset countdown-narrow.jpg @path %}',
-      '{% asset hero.jpg @path %}',
-      '{% asset hero-narrow.jpg @path %}',
-      '{% asset registry-bed-bath-and-beyond.png @path %}',
-      '{% asset registry-crate-and-barrel.png @path %}',
-      '{% asset registry-zola.png @path %}'
-    ]);
-
-    // These items must be cached and will block Service Worker installation
-    return cache.addAll([
-      '/',
-      '{% asset application.css @path %}',
-      '{% asset application.js @path %}'
-    ]);
-  }));
+  // Populate the cache…
+  event.waitUntil(
+    caches.open(cacheVersion).then(cache => {
+      return cache.addAll([
+        '/'
+      ]);
+    })
+  );
 });
 
 addEventListener('activate', event => {
   self.clients.claim();
 
-  // Clear old caches
-  event.waitUntil(caches.keys().then(keys => {
-    return Promise.all(keys.map(key => {
-      if (key.indexOf(version) === -1) {
-        return caches.delete(key);
-      }
-    }));
-  }));
+  // Clear old caches…
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.filter(cacheName => {
+          return cacheName !== cacheVersion;
+        }).map(cacheName => {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
 });
 
 addEventListener('fetch', event => {
   const request = event.request;
+  const url = new URL(request.url);
+
+  // Don't cache ignored URLs…
+  if (ignoredUrls.includes(url.hostname)) {
+    return;
+  }
 
   // Load resources from the cache first, then from the network…
-  event.respondWith(caches.match(request).then(response => {
-    return response || fetch(request);
-  }));
+  // Update the cached resource from the network…
+  event.respondWith(
+    caches.open(cacheVersion).then(cache => {
+      return caches.match(request).then(response => {
+        const fetchPromise = fetch(request).then(networkResponse => {
+          cache.put(request, networkResponse.clone());
+          return networkResponse;
+        }).catch(() => {
+          return response;
+        });
+
+        return response || fetchPromise;
+      });
+    })
+  );
 });
