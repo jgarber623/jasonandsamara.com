@@ -1,4 +1,4 @@
-# Jason & Samara are getting married!
+# Jason & Samara ~~are getting~~ got married!
 
 …and this is [our little wedding website](https://jasonandsamara.com). Samara lovingly designed it and Jason built it.
 
