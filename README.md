@@ -2,8 +2,9 @@
 
 …and this is [our little wedding website](https://jasonandsamara.com). Samara lovingly designed it and Jason built it.
 
-[![Travis CI: Build Status](https://img.shields.io/travis/jgarber623/jasonandsamara.com/master.svg?style=flat-square)](https://travis-ci.org/jgarber623/jasonandsamara.com)
-[![Snyk: Known Vulnerabilities](https://snyk.io/test/github/jgarber623/jasonandsamara.com/badge.svg?style=flat-square)](https://snyk.io/test/github/jgarber623/jasonandsamara.com)
+[![Build Status](https://img.shields.io/travis/jgarber623/jasonandsamara.com/master.svg?style=flat-square)](https://travis-ci.org/jgarber623/jasonandsamara.com)
+[![Dependencies](https://img.shields.io/depfu/jgarber623/jasonandsamara.com.svg?style=flat-square)](https://depfu.com/github/jgarber623/jasonandsamara.com)
+[![Known Vulnerabilities](https://snyk.io/test/github/jgarber623/jasonandsamara.com/badge.svg?style=flat-square)](https://snyk.io/test/github/jgarber623/jasonandsamara.com)
 
 ## Colophon
 
