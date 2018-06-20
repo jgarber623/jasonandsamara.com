@@ -21,7 +21,7 @@
   <link rel="shortcut icon" href="{% asset jasonandsamara-256x256.png @path %}">
   <link rel="source" href="https://github.com/jgarber623/jasonandsamara.com">
   {% asset application.css !type %}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600|Great+Vibes" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ 'https://fonts.googleapis.com/css?family=Crimson+Text:400,600|Great+Vibes' | uri_escape }}" crossorigin="anonymous">
 
   <!--[if lt IE 9]>
     {% asset vendor/html5shiv.js !type %}
