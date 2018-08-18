@@ -26,6 +26,8 @@ netlify:
         - /
       headers:
         - "Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none';"
+        - "Link: <{% asset application.css @path %}>; rel=preload; as=style"
+        - "Link: <{% asset application.js @path %}>; rel=preload; as=script"
         - "Link: <https://fonts.googleapis.com/>; rel=preconnect"
         - "Link: <https://fonts.gstatic.com/>; rel=preconnect"
         - "X-Frame-Options: SAMEORIGIN"
