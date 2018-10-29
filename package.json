@@ -7,9 +7,9 @@
     "build:files": "npx eleventy",
     "serve": "npx http-server ./public -c-1",
     "start": "npx npm-run-all --print-label build --parallel serve watch:*",
-    "test": "npx npm-run-all --print-label test:*",
-    "test:javascripts": "npx eslint ./src/_assets/javascripts",
-    "test:stylesheets": "npx sass-lint --no-exit --verbose",
+    "test": "$(npm bin)/npm-run-all --print-label test:*",
+    "test:javascripts": "$(npm bin)/eslint ./src/_assets/javascripts",
+    "test:stylesheets": "$(npm bin)/sass-lint --no-exit --verbose",
     "watch": "npx npm-run-all --parallel --print-label watch:*",
     "watch:assets": "npx gulp watch",
     "watch:files": "npx eleventy --watch"
