@@ -21,18 +21,18 @@
 }
 
 .billboard-hotel {
-  background-image: asset-url("billboard-hotel.jpg");
+  background-image: url("../images/billboard-hotel.jpg");
 
   @include breakpoint($medium) {
-    background-image: asset-url("billboard-hotel-medium.jpg");
+    background-image: url("../images/billboard-hotel-medium.jpg");
   }
 }
 
 .billboard-venue {
-  background-image: asset-url("billboard-venue.jpg");
+  background-image: url("../images/billboard-venue.jpg");
 
   @include breakpoint($medium) {
-    background-image: asset-url("billboard-venue-medium.jpg");
+    background-image: url("../images/billboard-venue-medium.jpg");
   }
 }
 

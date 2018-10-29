@@ -1,12 +1,9 @@
----
----
-
 {
   "short_name": "Jason & Samara",
   "name": "Jason & Samara",
   "icons": [
     {
-      "src": "{% asset jasonandsamara-256x256.png @path %}",
+      "src": "/assets/images/jasonandsamara-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     }

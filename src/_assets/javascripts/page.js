@@ -1,9 +1,7 @@
-//= require_tree ./components
-
 (function(window) {
   'use strict';
 
-  var Page = function() {
+  var Page = window.Page = function() {
     this.navigation = new Navigation({
       $control: document.querySelector('#navigation-control'),
       $region: document.querySelector('#navigation-list')
@@ -29,6 +27,4 @@
       }
     }
   };
-
-  new Page();
 })(window);

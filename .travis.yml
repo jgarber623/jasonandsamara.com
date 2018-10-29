@@ -1,19 +1,7 @@
-dist: trusty
-sudo: false
-language: ruby
-cache:
-  bundler: true
-  directories:
-    - node_modules
-rvm:
-  - 2.4.3
-install:
-  - bundle install --path vendor/bundle
-  - npm install
+language: node_js
+cache: npm
 before_script:
   - npm run build
-script:
-  - npm test
 notifications:
   email: false
   slack:
