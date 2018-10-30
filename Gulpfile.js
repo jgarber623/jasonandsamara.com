@@ -12,7 +12,7 @@ const imagesFilePaths = `${inputDir}/images/**/*`;
 const javascriptsFilePaths = `${inputDir}/javascripts/**/*`;
 const stylesheetsFilePaths = `${inputDir}/stylesheets/**/*.scss`;
 
-const vendorJavascriptsPaths = [
+const vendorJavascriptsFilePaths = [
   './node_modules/html5shiv/dist/html5shiv.min.js',
   './node_modules/picturefill/dist/picturefill.min.js'
 ];
@@ -39,7 +39,7 @@ function stylesheets() {
 }
 
 function vendorJavascripts() {
-  return src(vendorJavascriptsPaths)
+  return src(vendorJavascriptsFilePaths)
     .pipe(dest(`${outputDir}/javascripts/vendor`));
 }
 
@@ -49,5 +49,5 @@ exports.watch = () => {
   watch(imagesFilePaths, images);
   watch(javascriptsFilePaths, javascripts);
   watch(stylesheetsFilePaths, stylesheets);
-  watch(vendorJavascriptsPaths, vendorJavascripts);
+  watch(vendorJavascriptsFilePaths, vendorJavascripts);
 };
