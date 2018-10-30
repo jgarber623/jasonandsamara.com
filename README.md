@@ -8,7 +8,7 @@
 
 ## Colophon
 
-Text is set using [Crimson Text](https://fonts.google.com/specimen/Crimson+Text) and [Great Vibes](https://fonts.google.com/specimen/Great+Vibes) which are provided by [Google Fonts](https://fonts.google.com). The website is powered by [Ruby](https://www.ruby-lang.org), [Jekyll](http://jekyllrb.com), [Sass](http://sass-lang.com), and good old fashioned <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and JavaScript.
+Text is set using [Crimson Text](https://fonts.google.com/specimen/Crimson+Text) and [Great Vibes](https://fonts.google.com/specimen/Great+Vibes) which are provided by [Google Fonts](https://fonts.google.com). The website is powered by [Eleventy](https://www.11ty.io), [Sass](http://sass-lang.com), and good old fashioned <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and JavaScript.
 
 Our _amazing_ photography was shot by Jen Woodruff for [Asya Photography](https://asyaphotography.com) in downtown Philadelphia, <abbr title="Pennsylvania">PA</abbr>.
 
