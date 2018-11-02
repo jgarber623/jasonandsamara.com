@@ -2,17 +2,17 @@
   "name": "jasonandsamara.com",
   "private": true,
   "scripts": {
-    "build": "npx npm-run-all --parallel --print-label build:*",
-    "build:assets": "npx gulp build",
-    "build:files": "npx eleventy",
-    "serve": "npx http-server ./public -c-1",
-    "start": "npx npm-run-all --print-label build --parallel serve watch:*",
+    "build": "$(npm bin)/npm-run-all --parallel --print-label build:*",
+    "build:assets": "$(npm bin)/gulp build",
+    "build:files": "$(npm bin)/eleventy",
+    "serve": "$(npm bin)/http-server ./public -c-1",
+    "start": "$(npm bin)/npm-run-all --print-label build --parallel serve watch:*",
     "test": "$(npm bin)/npm-run-all --print-label test:*",
     "test:javascripts": "$(npm bin)/eslint ./src/_assets/javascripts",
     "test:stylesheets": "$(npm bin)/sass-lint --no-exit --verbose",
-    "watch": "npx npm-run-all --parallel --print-label watch:*",
-    "watch:assets": "npx gulp watch",
-    "watch:files": "npx eleventy --watch"
+    "watch": "$(npm bin)/npm-run-all --parallel --print-label watch:*",
+    "watch:assets": "$(npm bin)/gulp watch",
+    "watch:files": "$(npm bin)/eleventy --watch"
   },
   "dependencies": {
     "html5shiv": "^3.7.3",
