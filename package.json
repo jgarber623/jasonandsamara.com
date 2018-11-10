@@ -21,7 +21,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.5.4",
     "breakpoint-sass": "^2.7.1",
-    "eslint": "^5.8.0",
+    "eslint": "^5.9.0",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2",
