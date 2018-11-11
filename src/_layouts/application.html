@@ -12,19 +12,19 @@
 
   <meta name="twitter:card" content="summary">
   <meta property="og:description" content="Everything you’ll need to know about Jason’s and Samara’s wedding ceremony.">
-  <meta property="og:image" content="https://jasonandsamara.com/assests/images/jasonandsamara-256x256.jpg">
+  <meta property="og:image" content="https://jasonandsamara.com{% asset jasonandsamara-256x256.jpg @path %}">
   <meta property="og:title" content="Jason &amp; Samara are getting married!">
 
-  <link rel="apple-touch-icon" href="/assets/images/jasonandsamara-256x256.png">
+  <link rel="apple-touch-icon" href="{% asset jasonandsamara-256x256.png @path %}">
   <link rel="license" href="https://github.com/jgarber623/jasonandsamara.com/blob/master/LICENSE">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="shortcut icon" href="/assets/images/jasonandsamara-256x256.png">
+  <link rel="shortcut icon" href="{% asset jasonandsamara-256x256.png @path %}">
   <link rel="source" href="https://github.com/jgarber623/jasonandsamara.com">
-  <link rel="stylesheet" href="/assets/stylesheets/application.css">
+  {% asset application.css !type %}
   <link rel="stylesheet" href="{{ 'https://fonts.googleapis.com/css?family=Crimson+Text:400,600|Great+Vibes' | uri_escape }}" crossorigin="anonymous">
 
   <!--[if lt IE 9]>
-    <script src="/assets/javascripts/vendor/html5shiv.min.js"></script>
+    {% asset vendor/html5shiv.js !type %}
   <![endif]-->
 </head>
 <body>
@@ -68,14 +68,12 @@
       r.src=e;r.async=true;o.parentNode.insertBefore(r,o);if(typeof c==='function')r.onload=c;return r;
     }
 
-    if (window.matchMedia && document.querySelector) {
-      loadJS('/assets/javascripts/application.js', function() {
-        new Page();
-      });
+    if (typeof document.createElement('source').srcset === 'undefined') {
+      loadJS('{% asset vendor/picturefill.js @path %}');
     }
 
-    if (typeof document.createElement('source').srcset === 'undefined') {
-      loadJS('/assets/javascripts/vendor/picturefill.min.js');
+    if (window.matchMedia && document.querySelector) {
+      loadJS('{% asset application.js @path %}');
     }
 
     if (navigator.serviceWorker && !navigator.serviceWorker.controller) {

@@ -2,32 +2,16 @@
   "name": "jasonandsamara.com",
   "private": true,
   "scripts": {
-    "build": "$(npm bin)/npm-run-all --parallel --print-label build:*",
-    "build:assets": "$(npm bin)/gulp build",
-    "build:files": "$(npm bin)/eleventy",
-    "serve": "$(npm bin)/http-server ./public -c-1",
-    "start": "$(npm bin)/npm-run-all --print-label build --parallel serve watch:*",
-    "test": "$(npm bin)/npm-run-all --print-label test:*",
-    "test:javascripts": "$(npm bin)/eslint ./src/_assets/javascripts",
-    "test:stylesheets": "$(npm bin)/sass-lint --no-exit --verbose",
-    "watch": "$(npm bin)/npm-run-all --parallel --print-label watch:*",
-    "watch:assets": "$(npm bin)/gulp watch",
-    "watch:files": "$(npm bin)/eleventy --watch"
-  },
-  "dependencies": {
-    "html5shiv": "^3.7.3",
-    "picturefill": "^3.0.3"
+    "build": "bundle exec jekyll build --config jekyll.yml --profile --trace",
+    "start": "bundle exec jekyll serve --config jekyll.yml --trace",
+    "test": "$(npm bin)/npm-run-all test:*",
+    "test:html": "bundle exec htmlproofer ./public --assume-extension --empty-alt-ignore --only-4xx",
+    "test:javascript": "$(npm bin)/eslint src/_assets/javascripts",
+    "test:sass": "$(npm bin)/sass-lint --no-exit --verbose"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.5.4",
-    "breakpoint-sass": "^2.7.1",
-    "eslint": "^5.9.0",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.1",
-    "http-server": "^0.11.1",
-    "node-sass-globbing": "0.0.23",
+    "eslint": "^4.19.1",
+    "eslint-plugin-frontmatter": "0.0.5",
     "npm-run-all": "^4.1.3",
     "sass-lint": "^1.12.1"
   }

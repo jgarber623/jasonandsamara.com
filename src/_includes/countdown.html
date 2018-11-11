@@ -1,9 +1,9 @@
 <section aria-labelledby="heading-countdown" class="countdown" id="countdown" tabindex="-1">
   <picture>
     <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source srcset="/assets/images/countdown-narrow.jpg" media="(min-width: 32rem)">
+    <source srcset="{% asset countdown-narrow.jpg @path %}" media="(min-width: 32rem)">
     <!--[if IE 9]></video><![endif]-->
-    <img src="/assets/images/countdown.jpg" alt="">
+    {% asset countdown.jpg alt="" %}
   </picture>
 
   <div class="countdown-content">
