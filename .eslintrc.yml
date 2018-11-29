@@ -2,22 +2,6 @@ env:
   browser: true
   es6: true
 extends: 'eslint:recommended'
-plugins:
-  - frontmatter
 globals:
   Navigation: true
   Timer: true
-rules:
-  indent:
-    - error
-    - 2
-    - VariableDeclarator: 2
-  linebreak-style:
-    - error
-    - unix
-  quotes:
-    - error
-    - single
-  semi:
-    - error
-    - always
