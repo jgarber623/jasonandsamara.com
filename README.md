@@ -1,6 +1,6 @@
 # Jason & Samara ~~are getting~~ got married!
 
-…and this is [our little wedding website](https://jasonandsamara.com). Samara lovingly designed it and Jason built it.
+…and this is our little wedding website. Samara lovingly designed it and Jason built it.
 
 [![Build Status](https://img.shields.io/travis/jgarber623/jasonandsamara.com/master.svg?style=flat-square)](https://travis-ci.org/jgarber623/jasonandsamara.com)
 [![Dependencies](https://img.shields.io/depfu/jgarber623/jasonandsamara.com.svg?style=flat-square)](https://depfu.com/github/jgarber623/jasonandsamara.com)
